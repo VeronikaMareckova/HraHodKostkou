@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*****celá plocha********/
+    .allPage{
+        background: linear-gradient(#292cd0,#6100b0); /*prolínání dvou barev*/
+        height: 100vh; /*"zobrazení" výška 100%*/
+    }
+    .playGround{
+        width: 80%;     /*"zobrazení" šířka z 80%*/
+        height: 80%;    /*"zobrazení" výška z 80%*/
+        background: #fff; /*pozadí*/
+        position: relative; /*abych s pozadím mohla manipulovat*/
+        top: 10%; /*odssazení  ze zhora 10%*/
+        left: 10%; /*odssazení z leva 10%*/
+    }
+
+/************Celké skóre*************/
+.totalScore {
+    font-size: 20px; /*Velikost písma*/
+    color:#292cd0;
+    font-weight: bold;/*tučné písmo*/ 
+}
+
+    /*každý druhý tag p*/
+    .totalScore p:nth-of-type(2) { /*třída tag <p>  nth-of-type (2) tj.n-tý typ kokrétně mě zájímá každý 2-hý tag p  */
+    font-size: 30px; /*velikost písma*/
+    text-align: center; /*zarovnání na střed <p> je blokový elemnt*/ 
+    }
+
+    /*skére prvního hráče*/
+    .totalScore0{ /*touto třídou ovlivňuji jak text tak i čílo*/
+        position: absolute; 
+        top: 15%;
+        left: 10%
+    }
+    /*skére druhého hráče*/
+    .totalScore1{
+        position: absolute;
+        top: 15%;
+        right: 10%
+    }
+
+/*********Současné skóre*********/
+.currentScore{
+    width: 15%; /*šířka*/
+    height: 30%; /*výška*/
+    background: #292cd0; /*a pozadí rámečku*/
+}
+    /*upravuju <p> pro třídu současné skóre*/
+    .currentScore{
+        font-size: 20px; /*velikost písma*/
+        color: #fff; /*barva písma*/
+        text-align: center; /*zarovnání textu na střed*/
+
+        /**margin: auto; by mi zarovnalo rámečky na střed**/
+        padding-top: 1.5%; /*vnitřní odsazení */
+    }
+    /*2-hý p*/
+    .currentScore p:nth-child(2){ /*tj.n-tý typ kokrétně mě zájímá každý 2-hý tag p můžu vybrat i pomocí potoka tj. chirld */
+        font-size: 30px; /*velikost písma*/
+        
+    }
+
+    /*zarovnání */
+    .currentScore0{
+        position: absolute; 
+        top: 35%;
+        left: 10%
+    }
+    .currentScore1{
+        position: absolute;
+        top: 35%;
+        right: 10%;
+    }
+
+/*********3 tlačítka middleText = střední text*********/
+.middleText{
+    position: absolute; /*chci to někam umístit*/
+    bottom: 15%; /*hejbu 20% od zdola*/
+    left: 42%; /*hejbu 24%  z leva chci to dát na střed*/
+    /*border:1px solid red; mi ukazuje jak se text razovnává*/
+    text-align: center; /*razovnání textu na střed*/
+}
+    /*tlačítka = btn*/
+    .btn{
+        border: 1px solid #6100b0;/*rámeček*/
+        padding: 5px; /*vnitřní okraj vzdušnost*/
+        margin: 3px; /*vnější okraj odsazení*/
+        border-radius: 10px; /*zakulacení rámečku*/
+        background:linear-gradient(#6100b0,#6100b0,#fff); /*pozadí*/
+        color: #fff;
+    }
+
+    .btn:hover{
+        background:#292cd0;
+
+    }
+
+/*********Kostka = dice*********/
+.dice{
+    position: absolute;
+    bottom: 45%;
+    left: 42%;
+
+}
+
+/*********aktivní hráč = Active player*********/
+/*aktive = aktivní*/
+.active {
+    border: 1px solid #6100b0;/*rámeček*/
+    padding: 5px; /*vnitřní okraj vzdušnost*/
+    margin: 3px; /*vnější okraj odsazení*/
+    border-radius: 10px; /*zakulacení rámečku*/
+    background:linear-gradient(#6100b0,#6100b0,#fff); /*pozadí*/
+    color: #fff;
+    
+}
+
+
